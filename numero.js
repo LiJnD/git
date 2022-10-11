@@ -173,11 +173,11 @@ switch (actividad) {
         let suma;
 
         function calculo6() {
-            for(contador6 = 1; 1 <= 5 ; contador6++){
-                pesoAnteriro = prompt("Ingresa tu peso anterior persona #"+contador6);
+            for(contador6 = 1; contador6 <= 5 ; contador6++){
+                pesoAnteriro = Number(prompt("Ingresa tu peso anterior persona #"+contador6));
                 suma = 0;
                 for (contador62 = 1; contador62 <= 10; contador62++) {
-                   peso = prompt("Ingresa el peso #"+contador62);
+                   peso = Number(prompt("Ingresa el peso #"+contador62));
                     suma = suma + peso;
                 }
                 if((suma / 10) == pesoAnteriro){
@@ -192,7 +192,9 @@ switch (actividad) {
         }
         calculo6();
         break;
+        case 7:
 
+        break;
     default:
 
         alert('Ingrese el numero en letras');
