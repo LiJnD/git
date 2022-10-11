@@ -10,7 +10,7 @@ switch (actividad) {
         let verde = 0;
         let azul = 0;
         let contador1 = 1;
-        function calcula1() {
+        function calculo1() {
             while (autos > "0") {
                 const placas = prompt("Ingresa el ultimo digito de la placa. #" + contador1);
                 alert("siguiente")
@@ -36,7 +36,7 @@ switch (actividad) {
                 autos--;
             }
         }
-        calcula1();
+        calculo1();
         alert("La cantidad de autos amarillos son: " + amarillo);
         alert("La cantidad de autos rosas son: " + rosa);
         alert("La cantidad de autos rojos son: " + roja);
@@ -97,7 +97,7 @@ switch (actividad) {
         let horas_extras;
         let salario;
 
-        function calculo() {
+        function calculo3() {
             while (contador3 <= trabajadores) {
                 horas = prompt("ingrese el numero de horas trabajadas del trabajador #" + contador3);
                 if (horas <= 40) {
@@ -110,7 +110,7 @@ switch (actividad) {
                 contador3++;
             }
         }
-        calculo();
+        calculo3();
         break;
     case 4:
         let cantidadAlumno = prompt("Ingrese la cantidad de alumnos");
@@ -146,6 +146,53 @@ switch (actividad) {
         }
         calculo4();
         break;
+    case 5:
+        let total5 = prompt("Ingrese el total de numeros a calcular");
+        let contador5 = 1;
+        let numeroMenor = 0;
+        let numero;
+        function calculo5() {
+            while (contador5 <= total5) {
+                numero = prompt("Ingrese un numero #" + contador5);
+                if (contador5 == 1) {
+                    numeroMenor = numero;
+                } else if (numero < numeroMenor) {
+                    numeroMenor = numero;
+                }
+                contador5++;
+            }
+            alert("El numero menor es: " + numeroMenor);
+        }
+        calculo5();
+        break;
+    case 6:
+        let contador62 = 1;
+        let contador6 = 1;
+        let peso;
+        let pesoAnteriro;
+        let suma;
+
+        function calculo6() {
+            for(contador6 = 1; 1 <= 5 ; contador6++){
+                pesoAnteriro = prompt("Ingresa tu peso anterior persona #"+contador6);
+                suma = 0;
+                for (contador62 = 1; contador62 <= 10; contador62++) {
+                   peso = prompt("Ingresa el peso #"+contador62);
+                    suma = suma + peso;
+                }
+                if((suma / 10) == pesoAnteriro){
+                    alert("La persona "+contador6+" se mantiene en el peso.");
+                }else if((suma / 10) > pesoAnteriro){
+                    alert("La persona "+contador6+" subio de peso.");
+                }else{
+                    alert("La persona "+contador6+" bajo de peso.");
+                    
+                }  
+            }
+        }
+        calculo6();
+        break;
+
     default:
 
         alert('Ingrese el numero en letras');
