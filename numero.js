@@ -173,29 +173,47 @@ switch (actividad) {
         let suma;
 
         function calculo6() {
-            for(contador6 = 1; contador6 <= 5 ; contador6++){
-                pesoAnteriro = Number(prompt("Ingresa tu peso anterior persona #"+contador6));
+            for (contador6 = 1; contador6 <= 5; contador6++) {
+                pesoAnteriro = Number(prompt("Ingresa tu peso anterior persona #" + contador6));
                 suma = 0;
                 for (contador62 = 1; contador62 <= 10; contador62++) {
-                   peso = Number(prompt("Ingresa el peso #"+contador62));
+                    peso = Number(prompt("Ingresa el peso #" + contador62));
                     suma = suma + peso;
                 }
-                if((suma / 10) == pesoAnteriro){
-                    alert("La persona "+contador6+" se mantiene en el peso.");
-                }else if((suma / 10) > pesoAnteriro){
-                    alert("La persona "+contador6+" subio de peso.");
-                }else{
-                    alert("La persona "+contador6+" bajo de peso.");
-                    
-                }  
+                if ((suma / 10) == pesoAnteriro) {
+                    alert("La persona " + contador6 + " se mantiene en el peso.");
+                } else if ((suma / 10) > pesoAnteriro) {
+                    alert("La persona " + contador6 + " subio de peso.");
+                } else {
+                    alert("La persona " + contador6 + " bajo de peso.");
+
+                }
             }
         }
         calculo6();
         break;
-        case 7:
+    case 7:
+        let cantidad;
+        let total7 = 0;
+        let precio;
+        let respuesta;
+        let contador7 = 1;
+
+        function calculo7() {
+            do {
+                cantidad = Number(prompt("Ingrese la cantidad de producto"));
+                precio = Number(prompt("Ingrese el precio de los productos #"+contador7));
+                total7 = total7 + (cantidad * precio);
+                contador7++;
+                respuesta = confirm("¿Quiere agregar otro producto?");
+            } while (respuesta == true);
+            alert("El total que debera pagar por la compra es de: $" + total7);
+        }
+        calculo7();
+        break;
+        case 8:
 
         break;
     default:
-
         alert('Ingrese el numero en letras');
 }
