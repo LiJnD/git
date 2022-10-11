@@ -66,7 +66,7 @@ switch (actividad) {
             } else {
                 alert('Ingrese uno de los tres animales, por favor');
             }
-            
+
             for (contador2 = 1; contador2 <= total; contador2++) {
                 edad = prompt("ingresa la edad #" + contador2);
                 if (edad >= 0 && edad <= 1) {
@@ -89,6 +89,62 @@ switch (actividad) {
         alert("Porcentaje de edades de " + animal + "\n" + resultCategoria2 + "% de mas de un 1 año y de menos de 3 años.");
         alert("Porcentaje de edades de " + animal + "\n" + resultCategoria3 + "% de 3 años en adelante.");
 
+        break;
+    case 3:
+        let trabajadores = prompt("Ingrese la cantidad de trabajadores");
+        let contador3 = 1;
+        let horas;
+        let horas_extras;
+        let salario;
+
+        function calculo() {
+            while (contador3 <= trabajadores) {
+                horas = prompt("ingrese el numero de horas trabajadas del trabajador #" + contador3);
+                if (horas <= 40) {
+                    salario = horas * 20;
+                } else {
+                    horas_extras = horas - 40;
+                    salario = 40 * 20 + (horas_extras * 25);
+                }
+                alert("El salario del trabajador " + contador3 + " es $" + salario);
+                contador3++;
+            }
+        }
+        calculo();
+        break;
+    case 4:
+        let cantidadAlumno = prompt("Ingrese la cantidad de alumnos");
+        let edad4;
+        let edadHombres = 0;
+        let edadMujeres = 0;
+        let sexo;
+        let contador4 = 1;
+        let numeroHombres = 0;
+        let numeroMujeres = 0;
+        let promedioHombres = 0;
+        let promedioMujeres = 0;
+        function calculo4() {
+            while (contador4 <= cantidadAlumno) {
+                sexo = prompt("Ingrese el sexo #" + contador4 + "\n1-Hombre \n2-Mujer");
+                edad4 = Number(prompt("Ingrese la edad #" + contador4));
+                if (sexo == 1 || sexo == "Hombre" || sexo == "hombre") {
+                    edadHombres = edadHombres + edad4;
+                    numeroHombres++;
+                    promedioHombres = edadHombres / numeroHombres;
+                } else if (sexo == 2 || sexo == "Mujer" || sexo == "mujer") {
+                    edadMujeres = edadMujeres + edad4;
+                    numeroMujeres++;
+                    promedioMujeres = edadMujeres / numeroMujeres;
+                } else {
+                    alert("Ingrese uno de los dos sexo");
+                }
+                contador4++;
+            }
+            alert("El promedio del grupo de alumnos es: " + (edadMujeres + edadHombres) / cantidadAlumno + " años");
+            alert("El promedio del grupo de hombres es: " + promedioHombres + " años");
+            alert("El promedio del grupo de mujeres es: " + promedioMujeres + " años");
+        }
+        calculo4();
         break;
     default:
 
