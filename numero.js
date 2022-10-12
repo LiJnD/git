@@ -196,23 +196,66 @@ switch (actividad) {
         let cantidad;
         let total7 = 0;
         let precio;
-        let respuesta;
+        let respuesta7;
         let contador7 = 1;
 
         function calculo7() {
             do {
                 cantidad = Number(prompt("Ingrese la cantidad de producto"));
-                precio = Number(prompt("Ingrese el precio de los productos #"+contador7));
+                precio = Number(prompt("Ingrese el precio de los productos #" + contador7));
                 total7 = total7 + (cantidad * precio);
                 contador7++;
-                respuesta = confirm("¿Quiere agregar otro producto?");
-            } while (respuesta == true);
+                respuesta7 = confirm("¿Quiere agregar otro producto?");
+            } while (respuesta7 == true);
             alert("El total que debera pagar por la compra es de: $" + total7);
         }
         calculo7();
         break;
-        case 8:
-
+    case 8:
+        let edad8;
+        let respuesta8;
+        let precio8;
+        let descuento;
+        let categoria1 = 0;
+        let categoria2 = 0;
+        let categoria3 = 0;
+        let categoria4 = 0;
+        let categoria5 = 0;
+        let total8 = 0;
+        function calculo8() {
+            precio8 = Number(prompt("Ingresa el precio del boleto"));
+            do {
+                edad8 = Number(prompt("Ingrese la edad"));
+                if (edad8 < 5) {
+                    alert("No se permite niños menores de 5 años.")
+                } else if (edad8 <= 14) {
+                    descuento = precio8 * .35;
+                    categoria1 = categoria1 + descuento;
+                }else if( edad8 <= 19 ){
+                    descuento = precio8 * .25;
+                    categoria2 = categoria2 + descuento;
+                }else if( edad8 <= 45 ){
+                    descuento = precio8 * .10;
+                    categoria3 = categoria3 + descuento;
+                }else if( edad8 <= 65 ){
+                    descuento = precio8 * .25;
+                    categoria4 = categoria4 + descuento;
+                }else {
+                    descuento = precio8 * .35;
+                    categoria5 = categoria5 + descuento;
+                }
+                alert("descuento aplicado es: $"+descuento);
+                total8 = total8 + descuento;
+                respuesta8 = confirm("Desea continuar");
+            } while (respuesta8 == true);
+            alert("El descuento total en la categoria 1 es: $"+categoria1);
+            alert("El descuento total en la categoria 2 es: $"+categoria2);
+            alert("El descuento total en la categoria 3 es: $"+categoria3);
+            alert("El descuento total en la categoria 4 es: $"+categoria4);
+            alert("El descuento total en la categoria 5 es: $"+categoria5);
+            alert("El total a pagar es: $"+total8);
+        }
+        calculo8();
         break;
     default:
         alert('Ingrese el numero en letras');
