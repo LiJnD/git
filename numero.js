@@ -382,81 +382,81 @@ switch (actividad) {
 
         exercise();
         break;
-        case 12:
-            let numeros12 = prompt("Ingrese un número");
-            let contador12 = parseInt(numeros12.length);
-            let separador = [];
-            alert("¡Guardado!");
-            function calculo12() {
-                let suma12 = 0;
-                let promedio12 = 0;
-                let productoria12 = 0;
-    
-                numeros12.split('').forEach(numeros12 => suma12 += parseInt(numeros12));
-                promedio12 = suma12 / contador12;
-                productoria12 = numeros12.toString().split('').reduce(function (a, b) { return a * parseInt(b) }, 1);
-                separador.push(numeros12.toString().split('').reduce);
-                console.log(separador);
-    
-                alert("El numero tiene: " + contador12 + " digitos.");
-                alert("La suma de todos los digitos es: " + suma12);
-                alert("El promedio de todos los digitos es: " + promedio12);
-                alert("La productoria de todos los digitos es: " + productoria12);
-            }
-            function impares12() {
-                let numArray12 = [];
-                numArray12.push(contador12);
-                console.log(numArray12);
-                const contadorImpar12 = numArray12.filter(x12 => (x12 % 2) != 0).length;
-                const contadorpar12 = numArray12.filter(x12 => x12 % 2 == 0).length;
-    
-                alert("Hay " + contadorImpar12 + " numero impares.");
-                alert("Hay " + contadorpar12 + " numero pares.");
-            }
-    
-    
-            calculo12();
-            impares12();
-            break;
-            case 13:
-                let numeros13 = parseInt(prompt("Ingrese el numero limitante para la serie Fibonacci"));
-                alert("¡Guardado!");
-                let numArray = [0];
-        
-                function calculo13() {
-                    let contador13 = 1;
-                    let anterior13 = 0;
-                    let temp;
-                    while (true) {
-                        numArray.push(contador13);
-                        temp = contador13;
-                        contador13 += anterior13;
-                        anterior13 = temp;
-        
-                        if (contador13 >= numeros13) {
-                            break;
-                        }
-                    }
-                    alert("La serie de Fibonacci es: (" + numArray + ").");
+    case 12:
+        let numeros12 = prompt("Ingrese un número");
+        let contador12 = parseInt(numeros12.length);
+        let separador = [];
+        alert("¡Guardado!");
+        function calculo12() {
+            let suma12 = 0;
+            let promedio12 = 0;
+            let productoria12 = 0;
+
+            numeros12.split('').forEach(numeros12 => suma12 += parseInt(numeros12));
+            promedio12 = suma12 / contador12;
+            productoria12 = numeros12.toString().split('').reduce(function (a, b) { return a * parseInt(b) }, 1);
+            separador.push(numeros12.toString().split('').reduce);
+            console.log(separador);
+
+            alert("El numero tiene: " + contador12 + " digitos.");
+            alert("La suma de todos los digitos es: " + suma12);
+            alert("El promedio de todos los digitos es: " + promedio12);
+            alert("La productoria de todos los digitos es: " + productoria12);
+        }
+        function impares12() {
+            let numArray12 = [];
+            numArray12.push(contador12);
+            console.log(numArray12);
+            const contadorImpar12 = numArray12.filter(x12 => (x12 % 2) != 0).length;
+            const contadorpar12 = numArray12.filter(x12 => x12 % 2 == 0).length;
+
+            alert("Hay " + contadorImpar12 + " numero impares.");
+            alert("Hay " + contadorpar12 + " numero pares.");
+        }
+
+
+        calculo12();
+        impares12();
+        break;
+    case 13:
+        let numeros13 = parseInt(prompt("Ingrese el numero limitante para la serie Fibonacci"));
+        alert("¡Guardado!");
+        let numArray = [0];
+
+        function calculo13() {
+            let contador13 = 1;
+            let anterior13 = 0;
+            let temp;
+            while (true) {
+                numArray.push(contador13);
+                temp = contador13;
+                contador13 += anterior13;
+                anterior13 = temp;
+
+                if (contador13 >= numeros13) {
+                    break;
                 }
-        
-                function impares13() {
-                    let contadorImpar13 = 0;
-                    let contadorpar13 = 0;
-                    let contadorCero13 = 0;
-                    contadorImpar13 = numArray.filter(x13 => (x13 % 2) != 0).length;
-                    contadorpar13 = numArray.filter(x13 => x13 % 2 == 0).length;
-                    contadorCero13 = numArray.filter(x13 => x13 == 0).length;
-        
-                    alert("Hay " + contadorImpar13 + " numero impares.");
-                    alert("Hay " + contadorpar13 + " numero pares.");
-                    alert("Hay " + contadorCero13 + " ceros.");
-                }
-        
-                calculo13();
-                impares13();
-                break;
-                 
+            }
+            alert("La serie de Fibonacci es: (" + numArray + ").");
+        }
+
+        function impares13() {
+            let contadorImpar13 = 0;
+            let contadorpar13 = 0;
+            let contadorCero13 = 0;
+            contadorImpar13 = numArray.filter(x13 => (x13 % 2) != 0).length;
+            contadorpar13 = numArray.filter(x13 => x13 % 2 == 0).length;
+            contadorCero13 = numArray.filter(x13 => x13 == 0).length;
+
+            alert("Hay " + contadorImpar13 + " numero impares.");
+            alert("Hay " + contadorpar13 + " numero pares.");
+            alert("Hay " + contadorCero13 + " ceros.");
+        }
+
+        calculo13();
+        impares13();
+        break;
+
     case 14:
         let valor1 = Number(prompt("Ingrese el valor #1"));
         let valor2 = Number(prompt("Ingrese el valor #2"));
@@ -478,6 +478,20 @@ switch (actividad) {
             alert("¡Debes ingresar un valor mayor a cero!");
         }
 
+        break;
+    case 15:
+        let año = 0;
+        let poblacionA = 25;
+        let poblacionB = 19.9;
+
+        while (poblacionA > poblacionB) {
+            poblacionA += (poblacionA * .02);
+            poblacionB += (poblacionB * .03);
+            año++;
+        }
+        let añoB = 1994;
+        añoB += año;
+        alert("En el " + añoB + " año, la poblacion del pais B supera a la del pais A.");
         break;
     default:
         alert('¡Ingrese el numero en letras!');
