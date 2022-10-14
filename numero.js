@@ -295,7 +295,7 @@ switch (actividad) {
             alert("El #" + contador9 + " vendedor vendio $" + ventasArray[contador9] + " millones \n su comision es de: $" + comisionesArray[contador9]);
         }
         break;
-        case 10:
+    case 10:
         let candidato1 = 0;
         let candidato2 = 0;
         let candidato3 = 0;
@@ -339,6 +339,48 @@ switch (actividad) {
         } else {
             alert("¡El candidato 3 es el ganador!");
         }
+        break;
+    case 11:
+        function exercise() {
+            let numeros11 = parseInt(prompt("Ingrese un número"));
+            let primosArray = [2];
+            let primos = true;
+            let primosAdd = 0;
+            let suma = 0;
+            let promedio = 0;
+            let productoria = 0;
+
+            for (let i = 1, y = 3; (primosArray.length) < numeros11; i++, y = y + 2) {
+                primos = true;
+                let limit = Math.floor(Math.sqrt(y));
+
+                for (let x = 2; x <= limit; x++) {
+                    if (y % x == 0) {
+                        primos = false;
+
+                        break;
+                    }
+                }
+
+                primosAdd = y;
+
+                if (primos) {
+                    primosArray.push(primosAdd);
+                }
+
+            }
+
+            suma = primosArray.reduce((a, b) => a + b, 0);
+            productoria = (primosArray.reduce((a, b) => a * b, 1)).toFixed(4);
+            promedio = suma / numeros11;
+
+            alert("Numeros primos : " + primosArray + ".");
+            alert("La suma de todos los numeros primos son: " + suma);
+            alert("El promedio de los numeros primos es: " + promedio);
+            alert("La productoria de los numeros primos es: " + productoria);
+        }
+
+        exercise();
         break;
     default:
         alert('¡Ingrese el numero en letras!');
