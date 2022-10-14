@@ -295,6 +295,51 @@ switch (actividad) {
             alert("El #" + contador9 + " vendedor vendio $" + ventasArray[contador9] + " millones \n su comision es de: $" + comisionesArray[contador9]);
         }
         break;
+        case 10:
+        let candidato1 = 0;
+        let candidato2 = 0;
+        let candidato3 = 0;
+        let voto;
+        let contador10;
+
+        for (contador10 = 1; contador10 <= 50000; contador10++) {
+            function getRandom10(max) {
+                return Math.floor(Math.random() * max);
+            }
+            voto = Number(getRandom10(3) + 1);
+            if (voto == 1) {
+                candidato1++;
+            } else if (voto == 2) {
+                candidato2++;
+            } else {
+                candidato3++;
+
+            }
+        }
+        alert("Candidato 1 :" + candidato1 + " Votos.");
+        alert("Candidato 2 :" + candidato2 + " Votos.");
+        alert("Candidato 3 :" + candidato3 + " Votos.");
+        //Zona de empate
+        if (candidato1 == candidato2 && candidato1 == candidato3 && candidato2 == candidato3) {
+            alert("¡Los tres candidatos tuvieron un empate!")
+        } else if (candidato1 == candidato2 && candidato1 > candidato3) {
+            alert("¡Los candidatos 1 y 2 quedaron empatados!");
+        } else if (candidato1 == candidato3 && candidato1 > candidato3) {
+            alert("¡Los candidatos 1 y 3 quedaron empatados!");
+        } else if (candidato2 == candidato3 && candidato2 > candidato1) {
+            alert("¡Los candidatos 2 y 3 quedaron empatados!");
+        } else if (candidato1 > candidato2) {
+            if (candidato1 > candidato3) {
+                alert("¡El candidato 1 es el ganador!");
+            } else {
+                alert("¡El candidato 3 es el ganador!");
+            }
+        } else if (candidato2 > candidato3) {
+            alert("¡El candidato 2 es el ganador!");
+        } else {
+            alert("¡El candidato 3 es el ganador!");
+        }
+        break;
     default:
         alert('¡Ingrese el numero en letras!');
 }
