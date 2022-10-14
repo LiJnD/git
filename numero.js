@@ -456,6 +456,29 @@ switch (actividad) {
                 calculo13();
                 impares13();
                 break;
+                 
+    case 14:
+        let valor1 = Number(prompt("Ingrese el valor #1"));
+        let valor2 = Number(prompt("Ingrese el valor #2"));
+        let contador14;
+        let max;
+        if (valor1 > 0 && valor2 > 0) {
+            max = 1;
+            contador14 = 1;
+            while (contador14 <= valor1) {
+                if (valor1 % contador14 == 0 && valor2 % contador14 == 0) {
+                    if (contador14 > max) {
+                        max = contador14;
+                    }
+                }
+                contador14++;
+            }
+            alert("El maximo comun divisor es: " + max);
+        } else {
+            alert("¡Debes ingresar un valor mayor a cero!");
+        }
+
+        break;
     default:
         alert('¡Ingrese el numero en letras!');
 }
