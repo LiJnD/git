@@ -418,6 +418,44 @@ switch (actividad) {
             calculo12();
             impares12();
             break;
+            case 13:
+                let numeros13 = parseInt(prompt("Ingrese el numero limitante para la serie Fibonacci"));
+                alert("¡Guardado!");
+                let numArray = [0];
+        
+                function calculo13() {
+                    let contador13 = 1;
+                    let anterior13 = 0;
+                    let temp;
+                    while (true) {
+                        numArray.push(contador13);
+                        temp = contador13;
+                        contador13 += anterior13;
+                        anterior13 = temp;
+        
+                        if (contador13 >= numeros13) {
+                            break;
+                        }
+                    }
+                    alert("La serie de Fibonacci es: (" + numArray + ").");
+                }
+        
+                function impares13() {
+                    let contadorImpar13 = 0;
+                    let contadorpar13 = 0;
+                    let contadorCero13 = 0;
+                    contadorImpar13 = numArray.filter(x13 => (x13 % 2) != 0).length;
+                    contadorpar13 = numArray.filter(x13 => x13 % 2 == 0).length;
+                    contadorCero13 = numArray.filter(x13 => x13 == 0).length;
+        
+                    alert("Hay " + contadorImpar13 + " numero impares.");
+                    alert("Hay " + contadorpar13 + " numero pares.");
+                    alert("Hay " + contadorCero13 + " ceros.");
+                }
+        
+                calculo13();
+                impares13();
+                break;
     default:
         alert('¡Ingrese el numero en letras!');
 }
