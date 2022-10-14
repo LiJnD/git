@@ -268,7 +268,7 @@ switch (actividad) {
         let ventasArray = [];
         let comisionesArray = [];
         //calculo
-        for (let contador9 = 1; contador9 <= 10; contador9++) {
+        for (let contador9 = 1; contador9 <= 100; contador9++) {
             function getRandom10(max) {
                 return Math.floor(Math.random() * max);
             }
@@ -276,22 +276,18 @@ switch (actividad) {
 
             if (Number(ventasArray[contador9]) < 20) {
                 comisionesArray[contador9] = "10%";
-                console.log("entro");
             } else if (Number(ventasArray[contador9]) >= 20 && Number(ventasArray[contador9]) < 40) {
                 comisionesArray[contador9] = "15%";
-                console.log("entro");
             } else if (Number(ventasArray[contador9]) >= 40 && ventasArray[contador9] < 80) {
                 comisionesArray[contador9] = "20%";
-                console.log("entro");
             } else if (Number(ventasArray[contador9]) >= 80 && Number(ventasArray[contador9]) < 160) {
                 comisionesArray[contador9] = "25%";
-                console.log("entro");
             } else {
                 comisionesArray[contador9] = "30%";
             }
         }
         //muestreo
-        for (let contador9 = 1; contador9 < 10; contador9++) {
+        for (let contador9 = 1; contador9 < 100; contador9++) {
             alert("El #" + contador9 + " vendedor vendio $" + ventasArray[contador9] + " millones \n su comision es de: $" + comisionesArray[contador9]);
         }
         break;
