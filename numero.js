@@ -382,6 +382,42 @@ switch (actividad) {
 
         exercise();
         break;
+        case 12:
+            let numeros12 = prompt("Ingrese un número");
+            let contador12 = parseInt(numeros12.length);
+            let separador = [];
+            alert("¡Guardado!");
+            function calculo12() {
+                let suma12 = 0;
+                let promedio12 = 0;
+                let productoria12 = 0;
+    
+                numeros12.split('').forEach(numeros12 => suma12 += parseInt(numeros12));
+                promedio12 = suma12 / contador12;
+                productoria12 = numeros12.toString().split('').reduce(function (a, b) { return a * parseInt(b) }, 1);
+                separador.push(numeros12.toString().split('').reduce);
+                console.log(separador);
+    
+                alert("El numero tiene: " + contador12 + " digitos.");
+                alert("La suma de todos los digitos es: " + suma12);
+                alert("El promedio de todos los digitos es: " + promedio12);
+                alert("La productoria de todos los digitos es: " + productoria12);
+            }
+            function impares12() {
+                let numArray12 = [];
+                numArray12.push(contador12);
+                console.log(numArray12);
+                const contadorImpar12 = numArray12.filter(x12 => (x12 % 2) != 0).length;
+                const contadorpar12 = numArray12.filter(x12 => x12 % 2 == 0).length;
+    
+                alert("Hay " + contadorImpar12 + " numero impares.");
+                alert("Hay " + contadorpar12 + " numero pares.");
+            }
+    
+    
+            calculo12();
+            impares12();
+            break;
     default:
         alert('¡Ingrese el numero en letras!');
 }
